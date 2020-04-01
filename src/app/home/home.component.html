@@ -13,7 +13,8 @@
     <hr />
   </div>
 
- 
+  <app-country-filter [countryDropdownValues] = "dropdownValues" [countriesData] = "countriesDataCloned" class="desktopSelectBox"
+  (countryTotalDataChanged)="countryFilterApplied($event)"></app-country-filter>
 
   <!-- List Country Component -->
   <hr style="color: black;" class="desktopSelectBox" />
