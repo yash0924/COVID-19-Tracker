@@ -23,4 +23,19 @@
   <app-country-filter [countryDropdownValues] = "dropdownValues" [countriesData] = "countriesDataCloned" class="desktopSelectBox"
   (countryTotalDataChanged)="countryFilterApplied($event)"></app-country-filter>
   
+  <uib-accordion close-others="oneAtATime">
+      <div uib-accordion-group="" class="panel-default" is-open="status.open">
+        <uib-accordion-heading>
+        Accordion Heading Panel 1 <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+        </uib-accordion-heading>
+        Accordion content body text Panel1.
+      </div>
+    <div uib-accordion-group="" class="panel-default" is-open="status.open">
+      <uib-accordion-heading>
+      Accordion Heading Panel 2<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+      </uib-accordion-heading>
+      Accordion content body text Panel 2.
+    </div>
+  </uib-accordion>
+  
 </div>
