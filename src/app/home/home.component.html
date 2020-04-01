@@ -5,8 +5,15 @@
   <app-country-filter [countryDropdownValues] = "dropdownValues" [countriesData] = "countriesDataCloned" class="mobileSelectBox"
   (countryTotalDataChanged)="countryFilterApplied($event)"></app-country-filter>
   <br/>
-
+  <!-- List Country Component -->
+  <hr style="color: black;" class="desktopSelectBox" />
   <div class="row">
+    <div style="background-color: #404040; color: white; margin: 1px; " class="col-sm-12">
+      <app-list-of-country [countriesData]="countriesDataC" *ngIf="countriesDataC.length > 0"></app-list-of-country>
+    </div>
+  </div>
+  
+    <div class="row">
     <div style=" background-color: #404040;  margin-top: 1px; margin-bottom: 1px; " class="col-sm-12">
       <app-global-map></app-global-map>
     </div>
@@ -15,12 +22,5 @@
 
   <app-country-filter [countryDropdownValues] = "dropdownValues" [countriesData] = "countriesDataCloned" class="desktopSelectBox"
   (countryTotalDataChanged)="countryFilterApplied($event)"></app-country-filter>
-
-  <!-- List Country Component -->
-  <hr style="color: black;" class="desktopSelectBox" />
-  <div class="row">
-    <div style="background-color: #404040; color: white; margin: 1px; " class="col-sm-12">
-      <app-list-of-country [countriesData]="countriesDataC" *ngIf="countriesDataC.length > 0"></app-list-of-country>
-    </div>
-  </div>
+  
 </div>
